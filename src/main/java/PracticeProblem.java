@@ -13,8 +13,9 @@ public class PracticeProblem {
 			while ((i = fiRe.read())!=-1){
 				o = ((char)i);
 				out = out + String.valueOf(o);
-				out = out.replaceAll("[\\\r\\\n]+","");
+				
 			} 
+			
 		}
 		catch (Exception e){
 
@@ -30,6 +31,7 @@ public class PracticeProblem {
 
 			}
 		}
+		out = out.substring(0 , out.length()-1);
 		return out;
 	}
 }
