@@ -31,7 +31,7 @@ public class PracticeProblem {
 
 			}
 		}
-		out = out.substring(0 , out.length()-1);
+		
 		return out;
 	}
 
@@ -64,7 +64,7 @@ public class PracticeProblem {
 			}
 			catch (Exception e){}
 		}
-		return actOut.substring(1);
+		return actOut;
 	}
 }
 
