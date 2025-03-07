@@ -34,6 +34,38 @@ public class PracticeProblem {
 		out = out.substring(0 , out.length()-1);
 		return out;
 	}
+
+	public static String backwardsReadFile(String filenames){
+		FileReader fil = null;
+		int i;
+		int len =0;
+		char c;
+		String out = "";
+		String actOut = "";
+		try {
+			fil = new FileReader(filenames);
+			while ((i = fil.read()) != -1){
+				c = ((char)i);
+				out = out +c;
+			}
+		}
+		catch (Exception e){
+
+		}
+		finally{
+			len = out.length();
+			for (int a = len-1; a>=0; a--){
+				actOut = actOut+out.charAt(a);
+			}
+			try{
+				if (fil != null){
+					fil.close();
+				}
+			}
+			catch (Exception e){}
+		}
+		return actOut.substring(1);
+	}
 }
 
 	
